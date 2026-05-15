@@ -70,4 +70,61 @@ class ApiService {
       );
     }
   }
+
+  static Future<Cart> updateCart(
+    int id,
+    List<Map<String, dynamic>> products,
+  ) async {
+    try {
+      final response = await dio.put(
+        "/$id",
+        data: {'merge': false, 'products': products},
+      );
+      if (response.statusCode == 200 ||
+          response.statusCode == 201) {
+        return Cart.fromJson(response.data);
+      } else {
+        throw Exception('Failed to update cart');
+      }
+    } on DioException catch (e) {
+      throw Exception(
+        "Error while updating cart: ${e.message}",
+      );
+    }
+  }
+
+  static Future<Cart> patchCart(
+    int id,
+    List<Map<String, dynamic>> products,
+  ) async {
+    try {
+      final response = await dio.patch(
+        '/$id',
+        data: {'products': products},
+      );
+
+      if (response.statusCode == 200 ||
+          response.statusCode == 201) {
+        return Cart.fromJson(response.data);
+      } else {
+        throw Exception('Failed to patch cart');
+      }
+    } on DioException catch (e) {
+      throw Exception(
+        'Error while patching cart: ${e.message}',
+      );
+    }
+  }
+
+  static Future<bool> deleteCart(int id) async {
+    try {
+      final response = await dio.delete('/$id');
+
+      return response.statusCode == 200;
+    } on DioException catch (e) {
+      throw Exception(
+        'Error while deleting cart: ${e.message}',
+      );
+    }
+  }
 }
