@@ -1,4 +1,4 @@
-import 'package:api_using_dio_bloc/blocs/cart_block.dart';
+import 'package:api_using_dio_bloc/blocs/cart/cart_bloc.dart';
 import 'package:api_using_dio_bloc/screens/carts_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       home: MultiBlocProvider(
         providers: [
-          BlocProvider(create: (context) => CartBlock()),
+          BlocProvider(create: (context) => CartBloc()),
         ],
         child: CartsScreen(),
       ),
