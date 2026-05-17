@@ -1,17 +1,58 @@
-# api_using_dio_bloc
+# API Using Dio and Bloc
 
-A new Flutter project.
+A Flutter application that performs CRUD (Create, Read, Update, Delete) operations using the DummyJSON API with the dio package and Bloc state management.
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+## Features
 
-A few resources to get you started if this is your first Flutter project:
+- Fetch all carts
+- Fetch random cart
+- Create cart
+- Update cart
+- Patch cart
+- Delete cart
+- Loading states
+- Error handling
+- Bloc state management
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+---
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## API Used
+
+DummyJSON API
+
+https://dummyjson.com/carts
+
+---
+
+## Screenshots
+
+### Home Screen
+<img src="screenshots/home.png" width="250" alt="Home Screen">
+
+### Fetch All
+<img src="screenshots/fetch-all.png" width="250" alt="Fetch All">
+
+### Fetch Single
+<img src="screenshots/fetch-single.png" width="250" alt="Fetch Single">
+
+### Create Cart
+<img src="screenshots/create.png" width="250" alt="Create Cart">
+
+### Update Cart
+<img src="screenshots/update.png" width="250" alt="Update Cart">
+
+### Patch Cart
+<img src="screenshots/patch.png" width="250" alt="Patch Cart">
+
+### Delete Cart
+<img src="screenshots/delete.png" width="250" alt="Delete Cart">
+
+---
+
+## Name, ID and Section
+
+- Natnael Habteselassie Demissie
+- UGR/5666/16
+- Section 2
